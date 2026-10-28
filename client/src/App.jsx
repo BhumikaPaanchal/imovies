@@ -33,7 +33,7 @@ const [showFavorites, setShowFavorites] = useState(false);
 
 // Fetch movies from the backend
     useEffect(() => {
-        fetch('http://localhost:5000/api/movies')
+        fetch('https://imovies-fckz.onrender.com/api/movies')
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch movies');
@@ -57,7 +57,7 @@ useEffect(() => {
     const viewMovie = async (id) => {
         try {
             const response = await fetch(
-                `http://localhost:5000/api/movies/${id}`
+                `https://imovies-fckz.onrender.com/api/movies/${id}`
             );
 
             if (!response.ok) {
@@ -92,7 +92,7 @@ const addMovie = async (e) => {
     e.preventDefault();
 
     try {
-        const response = await fetch('http://localhost:5000/api/movies', {
+        const response = await fetch('https://imovies-fckz.onrender.com/api/movies', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -125,7 +125,7 @@ const addMovie = async (e) => {
 
         setShowAddForm(false);
 
-        const moviesResponse = await fetch('http://localhost:5000/api/movies');
+        const moviesResponse = await fetch('https://imovies-fckz.onrender.com/api/movies');
         const updatedMovies = await moviesResponse.json();
         setMovies(updatedMovies);
 
