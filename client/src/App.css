@@ -1,0 +1,149 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #141414;
+    color: white;
+}
+
+.app {
+    padding: 30px;
+}
+
+.app h1 {
+    color: #e50914;
+}
+
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.movie-card {
+    background: #242424;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-card h3 {
+    color: #ff4d4d;
+}
+
+.movie-card button {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.movie-card button:hover {
+    background: #b20710;
+}
+input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 15px 0 25px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background: #242424;
+    color: white;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: 2px solid #e50914;
+}
+select {
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background: #242424;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.movie-poster {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #333;
+}
+
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.movie-card {
+    background: #242424;
+    padding: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.movie-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #242424;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.close-button {
+    float: right;
+}
+.add-movie-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #242424;
+    border-radius: 10px;
+}
+
+.add-movie-form input,
+.add-movie-form textarea {
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.add-movie-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
